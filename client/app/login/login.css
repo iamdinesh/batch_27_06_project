@@ -1,0 +1,18 @@
+.loginContainer{
+	width: 300px;
+  margin: 12% auto 0 auto;
+  position: relative;
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.buttonContainer button{
+	  width: 100%;
+  padding: 5px;
+  background-color: #599EEC;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}

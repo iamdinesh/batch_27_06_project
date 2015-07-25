@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('finalProjectApp', [
+var app = angular.module('finalProjectApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -8,7 +8,17 @@ angular.module('finalProjectApp', [
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
-      .otherwise('/');
+      .otherwise('/login');
+
+    $stateProvider.state("login",{
+    	"url" : '/login',
+    	"templateUrl" : "/app/login/login.html",
+    	"controller" : "loginCtrl"
+    }).state("home",{
+      "url" : "/home",
+      "templateUrl" : "/app/home/home.html",
+      "controller" : "homeCtrl"
+    });
 
     $locationProvider.html5Mode(true);
   });
